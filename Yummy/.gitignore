@@ -1,0 +1,5 @@
+.idea/
+.env/
+.env
+__pycache__/
+app/tests/test_data

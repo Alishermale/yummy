@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  web:
+    image: dishes
+    build:
+      context: .
+      dockerfile: docker/bot/Dockerfile
+      args:
+        buildno: 1
+    ports:
+      - "8000:8000"
+
