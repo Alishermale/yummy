@@ -25,7 +25,6 @@ async def send(message: types.Message, state: FSMContext):
     await message.answer("Спасибо. Скоро мы обязательно ответим")
     await state.update_data(message=mess)
     for admin in ADMIN_ID:
-        print(admin)
         await bot.send_message(admin, f"{message.from_user.full_name} "
                                        f"написал:\n{mess}\n\n ID для ответа: {message.from_user.id}")
     await state.finish()
